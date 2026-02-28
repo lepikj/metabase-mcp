@@ -49,9 +49,7 @@ class AuthMethod(Enum):
 # Initialize FastMCP server with best practices configuration
 mcp = FastMCP(
     name="metabase-mcp",
-    on_duplicate_tools="error",  # Prevent accidental tool overwrites
-    on_duplicate_resources="warn",  # Warn on resource conflicts
-    on_duplicate_prompts="warn",  # Warn on prompt conflicts
+    on_duplicate="error",  # Prevent accidental tool/resource/prompt overwrites
 )
 
 # Add middleware for enhanced error handling and logging
