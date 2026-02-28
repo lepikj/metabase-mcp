@@ -18,9 +18,10 @@ A high-performance **Model Context Protocol (MCP) server** for **Metabase**, ena
 
 ### Query & Analytics
 - **SQL Execution**: Run native SQL queries with parameter support and templating
-- **Card Management**: Execute, create, and manage Metabase questions/cards
+- **MongoDB Support**: Execute native MongoDB queries with automatic JSON conversion for aggregation pipelines
+- **Card Management**: Execute, create, and manage Metabase questions/cards (SQL and MongoDB)
 - **Collection Organization**: Create and manage collections for better organization
-- **Natural Language Queries**: Let AI assistants translate questions into SQL
+- **Natural Language Queries**: Let AI assistants translate questions into SQL or MongoDB queries
 
 ### Authentication & Security
 - **API Key Support**: Secure authentication via Metabase API keys (recommended)
@@ -209,6 +210,7 @@ fastmcp install server.py -n "Metabase MCP"
 | Tool | Description |
 |------|------------|
 | `execute_query` | Execute native SQL queries with parameter support |
+| `execute_mongodb_query` | Execute native MongoDB queries with automatic JSON conversion for aggregation pipelines |
 | `execute_card` | Run saved Metabase questions/cards |
 
 ### Card Management
@@ -216,6 +218,7 @@ fastmcp install server.py -n "Metabase MCP"
 |------|------------|
 | `list_cards` | List all saved questions/cards |
 | `create_card` | Create new questions/cards with SQL queries |
+| `create_mongodb_card` | Create new MongoDB questions/cards with native query support |
 
 ### Collection Management
 | Tool | Description |
